@@ -2,7 +2,6 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 const glob = require("glob");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
@@ -59,7 +58,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
     new PurgeCSSPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     }),
