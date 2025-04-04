@@ -34,7 +34,7 @@ class SkipLink extends HTMLElement {
 
     this.innerHTML = `
       ${this._style.outerHTML}
-      <button id="skip-to-content">menuju ke konten</button>
+      <button id="skip-to-content">Ke konten</button>
     `;
     const skipToContent = document.querySelector('#skip-to-content');
 
